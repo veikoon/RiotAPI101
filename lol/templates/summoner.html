@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Index
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+
+      <div class="col-md-8 d-flex justify-content-center">
+        {% if summoner %}
+        <div class="card" style="width: 18rem;">
+          <img src="{% static '' %}assets/dragontail/13.1.1/img/profileicon/{{ summoner.profileIconId }}.png" class="card-img-top" alt="Profile picture">
+          <div class="card-body">
+            <p class="card-text text-center">{{ summoner.name }} - {{ summoner.summonerLevel }} <p>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+      
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+Index
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+
+      <div class="col-md-8">
+
+        <form method="post" action="{% url 'lol:summoner' %}">
+            <div class="input-group mb-3">
+                {% csrf_token %}
+                <input type="text" class="form-control" placeholder="Summoner's name" aria-label="Summoner's name" aria-describedby="button-addon2" name="summoner">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
+            </div>
+        </form>        
+      </div>
+      
+    </div>
+</div>
+{% endblock %}
