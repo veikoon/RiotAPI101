@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+      <div class="col-md-8">
+        {% for stat,value in stats.items %}
+        <ul class="list-group list-group-horizontal d-flex justify-content-center">
+            <li class="list-group-item">{{ stat }}</li>
+            <li class="list-group-item">{{ value }}</li>
+        </ul>
+        {% endfor %}
+      </div>
+    </div>
+
+    <h2 class="text-center">Challenges</h2>
+    <div class="row height d-flex justify-content-center align-items-center">
+        <div class="col-md-8">
+          {% for stat,value in challenges.items %}
+          <ul class="list-group list-group-horizontal d-flex justify-content-center">
+              <li class="list-group-item">{{ stat }}</li>
+              <li class="list-group-item">{{ value }}</li>
+          </ul>
+          {% endfor %}
+        </div>
+      </div>
+</div>
+{% endblock %}

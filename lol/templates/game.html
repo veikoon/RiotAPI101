@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+
+      <div class="col-md-8 d-flex justify-content-center">
+        {% for summoner in summoners_team1 %}
+        <div class="card" style="width: 18rem;">
+          <img src="{% static '' %}assets/dragontail/13.1.1/img/champion/{{ summoner.championName }}.png" class="card-img-top" alt="Profile picture">
+          <div class="card-body">
+            <p class="card-text text-center">{{ summoner.summonerName }} - {{ summoner.summonerLevel }} <p>
+            <div class="d-grid gap-2">
+              <a href="#" class="btn btn-success">Stats</a>
+            </div>  
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="col-md-8 d-flex justify-content-center mt-5">
+      {% for summoner in summoners_team2 %}
+        <div class="card" style="width: 18rem;">
+          <img src="{% static '' %}assets/dragontail/13.1.1/img/champion/{{ summoner.championName }}.png" class="card-img-top" alt="Profile picture">
+          <div class="card-body">
+            <p class="card-text text-center">{{ summoner.summonerName }} - {{ summoner.summonerLevel }} <p>
+            <div class="d-grid gap-2">
+              <a href="#" class="btn btn-success">Stats</a>
+            </div>  
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+{% endblock %}

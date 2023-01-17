@@ -130,5 +130,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-RIOT_API = ''
+RIOT_API = os.getenv("RIOT_API", default = None)
 DRAGONTAIL_VERSION = "13.1.1"
