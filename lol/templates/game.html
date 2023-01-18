@@ -8,7 +8,7 @@
 
       <div class="col-md-8 d-flex justify-content-center">
         {% for summoner in summoners_team1 %}
-        <div class="card" style="width: 18rem;">
+        <div class="card m-3" style="width: 18rem;">
           <img src="{% static '' %}assets/dragontail/13.1.1/img/champion/{{ summoner.championName }}.png" class="card-img-top" alt="Profile picture">
           <div class="card-body">
             <p class="card-text text-center">{{ summoner.summonerName }} - {{ summoner.summonerLevel }} <p>
@@ -22,7 +22,7 @@
 
       <div class="col-md-8 d-flex justify-content-center mt-5">
       {% for summoner in summoners_team2 %}
-        <div class="card" style="width: 18rem;">
+        <div class="card m-3" style="width: 18rem;">
           <img src="{% static '' %}assets/dragontail/13.1.1/img/champion/{{ summoner.championName }}.png" class="card-img-top" alt="Profile picture">
           <div class="card-body">
             <p class="card-text text-center">{{ summoner.summonerName }} - {{ summoner.summonerLevel }} <p>

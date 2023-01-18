@@ -5,3 +5,8 @@
     top: 100px;
     right: 10px;
  }
+
+body {
+    background-image: url("../img/background/background.jpg");
+    background-color: #363636;
+}
